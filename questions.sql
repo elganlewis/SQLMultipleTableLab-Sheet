@@ -153,9 +153,11 @@ WHERE EmployeeSalary > (
     );
 
 -- 5. Among all the departments with a total salary greater than £25000, find the departments that sell Stetsons. 
+SELECT * FROM Employee;
+SELECT * FROM Sale;
 SELECT DISTINCT DepartmentName
 FROM Sale
-WHERE ItemName = 'Stetsons'
+WHERE ItemName = 'Sextant'
     AND DepartmentName IN (
         SELECT DepartmentName
         FROM Employee
